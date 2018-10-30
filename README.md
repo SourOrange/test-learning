@@ -10,3 +10,5 @@ A new day it is...
 
 Also,I play basketball in the morning.Sunshine the sun still.
 OK.let's go python.but just finish you js yesterday first.
+
+啊，这么晚了啊，今天学了一点 django,加油啊小伙子，2B。。不要放弃，要加油，就算写一点点也好，加油啊！！！！

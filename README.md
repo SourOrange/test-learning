@@ -37,3 +37,14 @@ ls -ah # 显示三个东西，因为你直接去那个文件夹是看不到的�
 <br>然后是撤销修改，使用 git checkout ., 或者 git checkout -- filename。
 坚持，自律是必修课。我们生活在这里快速发展的时代，科技每逢三天更一新，Keep moving.<br>
 想不到从 github 克隆到本地也很容易。 <p style="color:orange;">git clone git@github.com:SourOrange/test-learning.git</p>
+
+因为创建、合并和删除分支非常快，所以Git鼓励你使用分支完成某个任务，合并后再删掉分支，这和直接在master分支上工作效果是一样的，但过程更安全。
+<pre>
+Git鼓励大量使用分支：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+</pre>

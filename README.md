@@ -34,3 +34,4 @@ ls -ah # 显示三个东西，因为你直接去那个文件夹是看不到的�
 现在是，如果我们回退到某个版本咋办？很容易，你可以用 git log, 查看历史状态，会发现 HEAD > ,指向当前的版本，也就是你要回退到某个版本，需要知道某个版本的commitid,比如你要回退到前一个版本就是使用， git reset --hard HEAD^, 或者 git reset --hard id(至少5位6位)， 当然了，如果你关机了。或者关闭了命令窗口，那怎么办，也行，使用 git reflog, 可以查看使用的命令历史，然后可以看到你做的一切修改，和commit 版本号。<br>
 <hr>
 另外，git 管理修改是，只有你使用 git add 之后，commit 的提交修改才有效，如果不把 git add 放进暂存区，那么commit 的修改只能是提交已经 add 在暂存区的内容，假设你做了两次修改，那么第一次修改之后>>>git add >>> git commit, 这样第一次修改的才确实被提交了，如果第二次修改了，你没有add，那么使用commit就不会提交第二次修改了！！！另外可以使用<<<<em>git diff HEAD -- filename, 查看工作区和版本库里面最新版本的区别。</em>
+<br>然后是撤销修改，使用 git checkout ., 或者 git checkout -- filename。

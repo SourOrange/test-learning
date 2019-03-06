@@ -35,3 +35,5 @@ ls -ah # 显示三个东西，因为你直接去那个文件夹是看不到的�
 <hr>
 另外，git 管理修改是，只有你使用 git add 之后，commit 的提交修改才有效，如果不把 git add 放进暂存区，那么commit 的修改只能是提交已经 add 在暂存区的内容，假设你做了两次修改，那么第一次修改之后>>>git add >>> git commit, 这样第一次修改的才确实被提交了，如果第二次修改了，你没有add，那么使用commit就不会提交第二次修改了！！！另外可以使用<<<<em>git diff HEAD -- filename, 查看工作区和版本库里面最新版本的区别。</em>
 <br>然后是撤销修改，使用 git checkout ., 或者 git checkout -- filename。
+坚持，自律是必修课。我们生活在这里快速发展的时代，科技每逢三天更一新，Keep moving.<br>
+想不到从 github 克隆到本地也很容易。 <p style="color:orange;">git clone git@github.com:SourOrange/test-learning.git</p>

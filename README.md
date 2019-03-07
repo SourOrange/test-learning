@@ -48,3 +48,4 @@ Git鼓励大量使用分支：
 合并某分支到当前分支：git merge <name>
 删除分支：git branch -d <name>
 </pre>
+啊，尽然行的通啊，用 git pull <remote>, 可以把远程的内容更新到本地了啊，好啊，不错！

@@ -49,3 +49,5 @@ Git鼓励大量使用分支：
 删除分支：git branch -d <name>
 </pre>
 啊，尽然行的通啊，用 git pull <remote>, 可以把远程的内容更新到本地了啊，好啊，不错！
+说会 git merge branchname, 这里我们会是fast forword 模式合并，缺点就是分支的信息也没了，而且我们在开发中一定要在分支中合并好，等到发布产品版本的时候再合并到master，并且我们需要留下历史分支的信息，
+所以我们先切回master, git checkout master, 再用 git merge --no-ff -m "commit message" branchname，然后你可以使用 git log --graph --pretty=oneline --abbrev-commit,查看到历史分支的信息，

@@ -51,3 +51,9 @@ Git鼓励大量使用分支：
 啊，尽然行的通啊，用 git pull <remote>, 可以把远程的内容更新到本地了啊，好啊，不错！
 说会 git merge branchname, 这里我们会是fast forword 模式合并，缺点就是分支的信息也没了，而且我们在开发中一定要在分支中合并好，等到发布产品版本的时候再合并到master，并且我们需要留下历史分支的信息，
 所以我们先切回master, git checkout master, 再用 git merge --no-ff -m "commit message" branchname，然后你可以使用 git log --graph --pretty=oneline --abbrev-commit,查看到历史分支的信息，
+
+继续，当我们在工作的时候，经常碰到bug的情况，举个例子，我们在分支工作，查看git status,看到有文件还没提交，老总要你现在修复一个bug,你写的文件里有一个单词错了，马上要改，那么此刻在分支上，我们还没提交的内容咋办，
+这里解决的关键就是 通过一个新的临时分支来修复，修复后，合并分支，再删除临时分支。具体做法就是：首先git stash, 这个命令可以把当前的工作场景先“储存”起来，然后用 git status,查看工作去，应该是干净的，现在可以放心创建分支
+来修复 bug, 首先确定要在哪个分支上修复bug，假定需要在master分支上修复，就从master创建临时分支：git checkout master, git checkout -b issue-101, 现在修改你的文件中的单词并保存啦，然后可以 git add 文件， git commit -m "fix bug 101",
+现在又回到master分支，git checkout master, 然后合成，git merge --no-ff -m "merged bug fixed 101" 分支名，好了，搞定了，现在继续回到分支，干活，git checkout 分支名， git status, 看看目前状态，工作区应该还是干净的，那么刚才的工作场景哪里去了，
+git stash list,这个就来查看了，然后用 git stash pop, 这样，恢复场景，并且删除了stash..好了，继续干活。
